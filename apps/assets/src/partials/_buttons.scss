@@ -1,0 +1,33 @@
+.mds-button {
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+    width: auto;
+  
+    background: #c60062;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  
+    padding: 12px 20px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+  
+    &:hover,
+    &:focus {
+        background: #f9007b;
+        text-decoration: none;
+    }
+  }
+  
+  .mds-button--neutral {
+    background: #fff;
+    border-color: #ddd;
+    color: #343433;
+  
+    &:hover,
+    &:focus {
+      background: #ddd;
+    }
+  }
+  

@@ -1,0 +1,49 @@
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  margin-bottom: 24px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre {
+  margin-bottom: 12px;
+}
+
+a {
+  color: #1b75bb;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #15598e;
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  list-style-position: outside;
+}

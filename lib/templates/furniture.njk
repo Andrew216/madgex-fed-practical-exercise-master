@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ locale or 'en' }}">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      if ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+        document.documentElement.className = ' js';
+      }
+    </script>
+    {% if NODE_ENV === 'production' %}
+      {# production mode so we serve the built client assets #}
+      <script type="module" src="assets/client/main.js"></script>
+      <link rel="stylesheet" href="assets/client/main.css" type="text/css"/>
+    {% else %}
+      {# dev mode we assume vite dev server is running with client assets #}
+      <script type="module" src="http://localhost:8887/src/index.js"></script>
+    {% endif %}
+  </head>
+  <body>
+    <div id="site-container">
+      <div class="mds-skip-to-content">
+        <a class="mds-skip-to-content__link" accesskey="S" title="Access key: S" href="#main">Skip to main content</a>
+      </div>
+      <header>header</header>
+      <main id="main">
+        <div class="wrapper">
+          {% block main %}
+            content
+          {% endblock %}
+        </div>
+      </main>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

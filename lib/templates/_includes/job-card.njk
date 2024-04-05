@@ -1,0 +1,34 @@
+{# 
+ # macro jobCard
+ # Card used in job listers
+ #
+ # Parameters:
+ # - job {object} - job data
+ #}
+{%- macro jobCard(job) -%}
+  <div class="job-card">
+    <div class="job-card__inner">
+      <h3>
+        <a href="">{{ job.title }}</a>
+      </h3>
+      <div class="mds-grid-row mds-grid-bottom mds-grid-top-md">
+        <div class="mds-grid-col-8 mds-grid-col-md-9">
+          <ul class="mds-list">
+            <li class="mds-list__item">{{ job.employer }}</li>
+            {% if job.locationDescription -%}
+              <li class="mds-list__item">{{ job.locationDescription }}</li>
+            {%- endif %}
+            {% if job.salaryDescription -%}
+              <li class="mds-list__item">{{ job.salaryDescription }}</li>
+            {%- endif %}
+          </ul>
+          <p>{{ job.summary }}</p>
+          <a href="#" class="mds-button mds-button--neutral" aria-label="View details about {{ job.title }}">View details</a>
+        </div>
+        <div class="mds-grid-col-4 mds-grid-col-md-3 mds-text-align-right">
+          <img class="job-card__logo" src="/assets/images/job-logo.jpg" alt=""/>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endmacro -%}

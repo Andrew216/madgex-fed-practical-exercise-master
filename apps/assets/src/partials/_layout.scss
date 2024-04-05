@@ -1,0 +1,42 @@
+body {
+    background: #f8f8f8;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1260px;
+    width: calc(97% - 20px);
+}
+
+header, footer {
+    min-height: 100px;
+    text-align: center;
+    padding: 20px;
+}
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+footer {
+    background: #333;
+    color: #fff;
+    border-top: 1px solid #ddd;
+}
+header, main {
+    margin-bottom: 20px;
+}
+
+.skyscraper-ad {
+    display: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 160px;
+    height: 600px;
+
+    @media only screen and (min-width: 1008px) {
+        display: block;
+    }
+}
