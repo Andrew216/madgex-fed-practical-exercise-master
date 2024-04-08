@@ -79,3 +79,4 @@ Although you do not need to worry about production mode and just concentrate on 
 - `npm run build` This will build the Vite assets into `./lib/public/client`
 - `npm run start` This will run the Hapi server only in production mode, the build client assets will be in the `<head>` of the page instead of the Vite dev server.
 # madgex-fed-practical-exercise-master
+# madgex-fed-practical-exercise-master
