@@ -1,0 +1,21 @@
+{#
+ # macro taxonomyCard
+ # Card used in taxonomy listers
+ #
+ # Parameters:
+ # - category {object} - category data
+ #}
+{%- macro taxonomyCard(category) -%}
+  <div class="taxonomy-card">
+    <div class="taxonomy-card__inner">
+      <ul>
+        <li><a href="" class="taxonomy-card__list">{{ category.names[0].value }}</a>
+           </li> </ul>
+      <ol class="mds-list__item">
+        {% for item in category.terms %}
+          <li><a>{{ item.names[0].value }} </a> ({{ item.count }})</li>
+        {% endfor %}
+        </ol>
+    </div>
+  </div>
+{%- endmacro -%}
