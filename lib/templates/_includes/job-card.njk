@@ -1,4 +1,4 @@
-{# 
+{#
  # macro jobCard
  # Card used in job listers
  #
@@ -14,7 +14,7 @@
       <div class="mds-grid-row mds-grid-bottom mds-grid-top-md">
         <div class="mds-grid-col-8 mds-grid-col-md-9">
           <ul class="mds-list">
-            <li class="mds-list__item">{{ job.employer }}</li>
+            <li class="mds-list__item">{{ job.recruiter.name }}</li>
             {% if job.locationDescription -%}
               <li class="mds-list__item">{{ job.locationDescription }}</li>
             {%- endif %}

@@ -1,9 +1,19 @@
 {% extends 'furniture.njk' %}
 {% from './_includes/job-card.njk' import jobCard %}
+{% from './_includes/taxonomy-card.njk' import taxonomyCard %}
 {% block main %}
   <h1>Browse jobs</h1>
   <div class="mds-grid-row">
-    <div class="mds-grid-col-12 mds-grid-col-lg-3">[FILTER]</div>
+    <div class="mds-grid-col-12 mds-grid-col-lg-3">
+     <div class="taxonomy-card">
+    <div class="taxonomy-card__inner">
+      <h3>Filter Jobs</h3>
+      </div>
+      </div>
+       {% for category in taxonomy %}
+          {{ taxonomyCard(category) }}
+        {% endfor %}
+    </div>
     <div class="mds-grid-col-12 mds-grid-col-lg-7">
       <h2 id="jobs-lister">Found {{ jobCount }} jobs</h2>
       <ul class="mds-margin-bottom-b4" aria-labelledby="jobs-lister">
